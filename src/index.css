@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-bg-base: var(--bg-base);
+  --color-bg-panel: var(--bg-panel);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-faint: var(--border-faint);
+  --color-border-strong: var(--border-strong);
+  --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-text-fainter: var(--text-fainter);
+  --color-text-faintest: var(--text-faintest);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-faint: var(--bg-faint);
+  --color-bg-strong: var(--bg-strong);
+  --color-bg-hover: var(--bg-hover);
+}
+
+:root {
+  --bg-base: #f5f5f5;
+  --bg-panel: #ffffff;
+  --border-subtle: rgba(0, 0, 0, 0.1);
+  --border-faint: rgba(0, 0, 0, 0.05);
+  --border-strong: rgba(0, 0, 0, 0.2);
+  --text-main: #171717;
+  --text-secondary: #404040;
+  --text-tertiary: #525252;
+  --text-muted: #737373;
+  --text-faint: #a3a3a3;
+  --text-fainter: #d4d4d4;
+  --text-faintest: #e5e5e5;
+  --bg-subtle: rgba(0, 0, 0, 0.05);
+  --bg-faint: rgba(0, 0, 0, 0.02);
+  --bg-strong: rgba(0, 0, 0, 0.1);
+  --bg-hover: rgba(0, 0, 0, 0.03);
+}
+
+.dark {
+  --bg-base: #050505;
+  --bg-panel: #0A0A0A;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-faint: rgba(255, 255, 255, 0.05);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --text-main: #ffffff;
+  --text-secondary: #e5e5e5;
+  --text-tertiary: #d4d4d4;
+  --text-muted: #a3a3a3;
+  --text-faint: #737373;
+  --text-fainter: #525252;
+  --text-faintest: #404040;
+  --bg-subtle: rgba(255, 255, 255, 0.05);
+  --bg-faint: rgba(255, 255, 255, 0.1);
+  --bg-strong: rgba(255, 255, 255, 0.2);
+  --bg-hover: rgba(255, 255, 255, 0.02);
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for a sleeker look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
+}
+
+/* Remove default input background autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--bg-base) inset !important;
+    -webkit-text-fill-color: var(--text-main) !important;
+}
